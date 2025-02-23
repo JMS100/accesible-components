@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menus Accesibility Study and Revision-</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=IBMPlexSerif' rel='stylesheet'>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <h1>Accesible Components: Dropdown Menu</h1>
+        </header>
+        <h2>
+            Dropdown menus are used across countless of applications. This study will evalulate the accesibility factors of dropdown menus and propose improvements for three cases:
+            <ol>
+                <li>Google Calendar</li>
+                <li>Firefox</li>
+                <li>Facebook</li>
+            </ol>
+        
+        </h2>
+        <h3><b>Case 1: Google Calendar</b></h3>
+        <hr> 
+        <div class="image-container">
+            <img src="images/gcal/gcal1.png" alt="Google Calendar Dropdown Menu Not Clicked">
+            <img src="images/gcal/gcal2.png" alt="Google Calendar Dropdown Menu Hover">
+            <img src="images/gcal/gcal3.png" alt="Google Calendar Dropdown Menu Clicked and Item Hover">
+        </div>
+        <h3><b>Case 2: Firefox Menu</b></h3>
+        <hr> 
+        <div class="image-container">
+            <img src="images/firefox/firefox1.png" alt="Firefox Menu Not Clicked">
+            <img src="images/firefox/firefox2.png" alt="Firefox Menu Clicked">
+            <img src="images/firefox/firefox3.png" alt="Firefox Menu Dropdown Menu Clicked and Item Hover">
+        </div>
+        <h3><b>Case 3: Facebook Profile Menu</b></h3>
+        <hr> 
+        <div class="image-container">
+            <img src="images/facebook/facebook1.png" alt="Facebook Menu Not Clicked">
+            <img src="images/facebook/facebook2.png" alt="Firefox Menu Clicked">
+            <img src="images/facebook/facebook3.png" alt="Facebook Menu Dropdown Menu Clicked and Item Hover">
+        </div>
+        <h3>
+            A few screenshots are shown above from each case. Note that not all possible interactions are shown for each (mouse/touchpad, keyboard, and touch). Below will cover the accessibility evaluation for each of these methods:
+        </h3>
+        <h2><b>Input Analysis</b></h2>
+        <hr> 
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th></th> <th>Google Calendar</th> <th>Firefox</th> <th>Facebook</th>
+                </tr>
+                <tr>
+                    <th>Mouse/Touchpad</td> 
+                        <td>
+                            <ul>
+                                <!-- <li>Color change on hover</li> -->
+                                <li>Clear and succinct list of possible options</li>
+                                <li>Will only close once clicked off of</li>
+                                <li>Easy to navigate and learn features</li>
+                            </ul>
+                            
+                        </td> 
+                        <td>
+                            <ul>
+                                <!-- <li>Color change on hover</li> -->
+                                <li>List divided into subsections</li>
+                                <li>Will only close once clicked off of</li>
+                                <li>Easy to navigate but hard to remember all features</li>
+                            </ul>
+                        </td> 
+                        <td>
+                            <ul>
+                                <!-- <li>Profile picture blurs on hover</li> -->
+                                <!-- <li>Gray becomes lighter on hover</li> -->
+                                <li>Buttons of different sizes are hard to differentiate between and remember</li>
+                                <li>Extra hard-to-access links shown at bottom (privacy, consumer health, terms, etc.)</li>
+                                <li>Will only close once clicked off of</li>
+                            </ul>
+                        </td>
+                </tr>
+                <tr>
+                    <th>Keyboard</td>
+                        <td>
+                            <ul>
+                                <li>Navigate to menu through tab and drop down on space/enter</li>
+                                <li>Navigate menu with arrow keys</li>
+                                <li>Close menu with tab or ESC</li>
+                                <li>Easy to navigate and arrow keys are more intuitive</li>
+                            </ul>
+                        </td> 
+                        <td>
+                            <ul>
+                                <li>Cannot get menu to drop down through keyboard</li>
+                                <li>Once dropped down, navigate menu with tab</li>
+                                <li>Close menu with ESC</li>
+                                <li>Easy to navigate but tab/shift-tab are less intuitive than arrow keys</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Navigate to menu through tab and drop down on space/enter</li>
+                                <li>Navigate menu with tab</li>
+                                <li>Close menu with ESC</li>
+                                <li>The fact that you cannot trigger the dropdown menu with the keyboard makes it not accessible.</li>
+                            </ul>
+                        </td>
+                </tr>
+                <tr>
+                    <th>Touch (if available)</td>
+                        <td>
+                            <ul>
+                                <li>On iPhone app, a “drop-up” menu appears on click</li>
+                                <li>However, all buttons on the menu are small and hard to click</li>
+                            </ul>
+                            
+                        </td>
+                        <td>
+                            <ul>
+                                <li> Button does not exist in app</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li> Button does not exist in app</li>
+                            </ul>
+                        </td>
+                </tr>
+            </table>
+        </div>
+        <h3>
+            The table above summarizes the accessibility of dropdown menus for each input case. I'd rank their performance as follows.
+            <ol>
+                <li><b>Google Calendar</b> performs the best across all three input methods. 
+                    It is an easy to understand menu that can be navigated easily and conveniently with each of the given methods. </li>
+                <li><b>Facebook</b> is second but a little hard to keep track of with multiple small sub menus at the bottom <i>(see privacy and terms)</i>. </li>
+                <li><b>Firefox</b> is the worst of the three as the menu cannot even be opened with keyboard navigation. </li>   
+            </ol>
+        </h3>
+        <h2><b>Output Analysis</b></h2>
+        <hr> 
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th></th> <th>Google Calendar</th> <th>Firefox</th> <th>Facebook</th>
+                </tr>
+                <tr>
+                    <th>Mouse/Touchpad</td> 
+                        <td>
+                            <ul>
+                                <li>All buttons change to a different slightly darker color on hover</li>
+                                <li>Slight delay between clicks and subsequent results (makes things feel final)</li>
+                            </ul>
+                            
+                        </td> 
+                        <td>
+                            <ul>
+                                <!-- <li>Color change on hover</li> -->
+                                <li>All buttons change to a different slightly darker color on hover</li>
+                                <li>No delay between clicks and subsequent results (makes things feel snappy)</li>
+                            </ul>
+                        </td> 
+                        <td>
+                            <ul>
+                                <li>All buttons change to a different slightly lighter color on hover</li>
+                                <li>Profile picture blurs out on hover</li>
+                                <li>Slight delay between clicks and subsequent results (makes things feel final)</li>
+                                <li>Smaller buttons on bottom (privacy, terms) are underlined on hover but have no color change</li>
+                            </ul>
+                        </td>
+                </tr>
+                <tr>
+                    <th>Keyboard</td>
+                        <td>
+                            <ul>
+                                <li>All buttons get a blue outline when tabbed onto</li>
+                                <li>No buttons get a darker tone when using tab</li>
+                                <li>The blue outline “pulses” (goes from bigger outline to smaller outline) when moved to indicate a change.</li>
+                                <li>Logical focus order where using the down arrow goes down the dropdown menu and shift-tab goes up </li>
+                                <li>No wrap-around on the menu</li>
+                            </ul>
+                        </td> 
+                        <td>
+                            <ul>
+                                <li>All buttons get a blue outline when tabbed onto</li>
+                                <li>No buttons get a darker tone when using tab</li>
+                                <li>Logical focus order where tabbing goes down the dropdown menu and shift-tab goes up </li>
+                                <li>Yes wrap-around (tab continuously brings you back to top of menu) eventually</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <!-- <li>All buttons are outlined with a blue/white outline when they are tabbed onto while the lighter color is also there</li> -->
+                                <!-- <li>Profile picture is also given a blue/white and remains slightly blurred out</li> -->
+                                <li>Smaller buttons on bottom lose the underline and only have a blue/white outline.</li>
+                                <li>Logical focus order where tabbing goes down the dropdown menu and shift-tab goes up </li>
+                                <li>Yes wrap-around</li>
+                            </ul>
+                        </td>
+                </tr>
+                <tr>
+                    <th>Screen Reader</td>
+                        <td>
+                            <ul>
+                                <li>Informative messages let you know that you are on a dropdown menu when hovering or tabbed on create button</li>
+                                <li>When navigating the dropdown menu, message tells you that you are in a menu, what item you are on in the menu, and what number of the menu you are on (top item being item #1). </li>
+                            </ul>
+                            
+                        </td>
+                        <td>
+                            <ul>
+                                <li>No message to tell you that you are on a drop down menu, just says “Firefox”</li>
+                                <li>Each menu button is labeled as a button, but does not tell you that you are in a dropdown menu or which item you are at in the list</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Message tells you that you are on a dropdown menu when on profile picture</li>
+                                <li>In menu itself, screenreader tells you that you are part of a group and each item is a button but not which number item</li>
+                            </ul>
+                        </td>
+                </tr>
+                <tr>
+                    <th>Touch (if available)</td>
+                        <td>
+                            <ul>
+                                <li>Buttons have no reaction to being pressed -- switches quickly to next screen</li>
+                                <li>Pressing the create event button blurs out the rest of the screen so you can focus on the new button choices available</li>
+                            </ul>
+                            
+                        </td>
+                        <td>
+                            <ul>
+                                <li> Button does not exist in app</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li> Button does not exist in app</li>
+                            </ul>
+                        </td>
+                </tr>
+            </table>
+        </div>
+        <h3>
+            The table above summarizes the accessibility of dropdown menus for each ouput case. 
+            I'd rank their performance as follows:
+            <ol>
+                <li>
+                    <b>Google Calendar</b> once again performs the best.
+                    It has the most clear output changes for keyboard and best screen reader announcements.
+                </li>
+                <li>
+                    <b>Facebook</b> comes in second once again, with worse screen reader messages than Google and small buttons that do not give great outbook feedback when hovered over.
+                </li>
+                <li>
+                    <b>Firefox</b> is the worst of the three as it has no screen reader message for the dropdown menu button itself, but it's ease of navigating with keyboard/mouse is similar to that of facebook.
+                </li>
+            </ol>
+        </h3>
+        <h2><b>State Model Analysis</b></h2>
+        <hr>
+        <h3>
+            State models are a useful way to visualize the different states of a component and how they interact with each other. 
+            Below are the state models for mouse users and keyboard users of the Google Calendar dropdown menu.
+        </h3>
+        <div class="image-container">
+            <img src="images/state_models/gcal_state_model_mouse.png" alt="Google Calendar Dropdown Menu State Model Mouse">
+            <img src="images/state_models/gcal_state_model_keyboard.png" alt="Google Calendar Dropdown Menu State Model Keyboard">
+        </div>
+        <h3>
+            The state model above shows the different states of the dropdown menu and how they interact with each other.
+            However, there are problems regarding  both for screen-reader users.
+            Below, I list a problem with each input method and propose a solution. Tradeoffs are also discussed.
+        </h3>
+        <h3>
+            <b>Mouse:</b>
+            <hr class="custom-hr">
+            <ul>
+                <li>
+                    <b>Problem:</b> For a user who has trouble seeing the menu bar, it is easy to accidently exit the menu.
+                </li>
+                <li>
+                    <b>Solution:</b> Add a "buffer zone" state that stops the mouse from exiting the dropdown menu for a small movement space.
+                </li>
+                <li>
+                    <b>Tradeoff:</b> Users who want to quickly leave the menu bar are forced to add extra movement inputs on the keyboard before being allowed to do so.
+                    This decreases <u>efficiency.</u>
+                </li>
+            </ul>
+        </h3>
+        <h3>
+            <b>Keyboard:</b>
+            <hr class="custom-hr">
+            <ul>
+                <li>
+                    <b>Problem:</b> For a keyboard user who is usually using Tab to move around the page,
+                    it is weird that the dropdown menu is closed with tab and they have to switch to keyboard to navigate.
+                <li>
+                    <b>Solution:</b> Remove Tab as a way to exit the dropdown menu, making only ESC allowed. 
+                </li>
+                <li>
+                    <b>Tradeoff:</b> Users lose an <i>options</i> to exit the menu bar by limiting it to only ESC. 
+                    For a user who has trouble reaching the ESC key or some other complication, this proposes a new difficulty.
+                </li>
+            </ul>
+        Below are <b>revised state models</b> that implement the solutions above.
+        </h3>
+        <div class="image-container">
+            <img src="images/state_models/gcal_state_model_mouse_revised.png" alt="Google Calendar Dropdown Menu State Model Mouse">
+            <img src="images/state_models/gcal_state_model_keyboard_revised.png" alt="Google Calendar Dropdown Menu State Model Keyboard">
+        </div>
+        <h2><b>Revised Component</b></h2>
+        <hr>
+        <h3>
+            Based on the state model analysis above, I developed the following revised Google Calendar dropdwon menu in figma.
+            The image below shows the revised component in three states.
+            <ol>
+                <li>Default State</li>
+                <li>Click State - Dropdown Initiated</li>
+                <li>Hover State - Dropdown Item</li>
+            </ol>
+        </h3>
+        <div class="image-container">
+            <img src="images/revised_component/revised_component_3_states.png" alt="Revised Dropdown Menu">
+        </div>
+        <h3><b>Deisgn Annotations</b></h3>
+        <hr class="custom-hr2">
+        <h3>
+            These changes have effects regarding <b>learnability, memorability, efficiency, and accesiblity.</b>
+            <ul>
+                <li><b>Learnability:</b> The addition of the buffer zone and lines between menu items makes it easier to learn how to use the dropdown menu without accidently exiting it.</li>
+                <li><b>Memorability:</b> The addition of the larger down-arrow size makes it more memorable for users that this is a dropdown menu.</li>
+                <li><b>Efficiency:</b> The addition of numbered menu items provides an efficient keyboard shortcut for experienced users and streamlines the screen-reader experience.</li>
+                <li><b>Accessibility:</b> The addition of the buffer zone and lines between menu items makes it easier for users with disabilities to use the dropdown menu and differentiate between components.</li>
+            </ul> 
+        </h3>
+        <h2><b>Reflection</b></h2>
+        <hr>
+        <h3>
+            <b>Main Findings:</b>
+            <hr class="custom-hr2">
+            <ul>
+                <li>
+                    All the dropdown menus I observed did well on usability and accesibility, especially Google Calendar
+                </li>
+                <li>
+                    Google Calender had informative screen reader messages, clear output changes, easy navigation, and good learnability. 
+                </li>
+                <li>
+                    Its main issues were with memorability and efficiency, which I addressed with the revised component.
+                </li>
+                <li>
+                    The revised component I designed improved upon the original by adding a buffer zone for mouse user, lines between menu items, larger icons, and keyboard shortcuts
+                </li>
+                <li>
+                    The revised component solves for mismatches by bridging gaps between a person's abilities and their environment. 
+                    <ul>
+                        <li>For example, the keyboard shortcuts make navigation more efficeint for keyboard users and the buffer zone makes it easer for mouse users without exact motor skills to navigate the page. </li>
+                    </ul>
+                </li>
+            </ul>
+            <b>Accesibility and Inacessibility:</b>
+            <hr class="custom-hr2">
+            Let's also go over two instances of accesibiltiy and inacessibility in <b>Facebook's</b> menu.
+            <ol>
+                <li>
+                    Accesibility: The screen reader announces that you are on a dropdown menu when you hover over the profile picture, helping users with vision disabilites.
+                </li>
+                <li>
+                    Inacessibility: There are a collection of small buttons for Terms & Agreement, Privacy, and other features on the bottom of the menu that are difficult to click, hurting users with motor disabilities.
+                </li>
+            </ol>
+            Together, these examples show how even when mouse users are prioritized and proper screen-reader functionality is implemented, companies can seek minimization methods to hide their most problematic menu items.
+        </h3>
+        <h3>
+            <b>Final Thoughts:</b>
+            <hr class="custom-hr2">
+            Taking all these observations together, it is easy to see that mouse users with fine motor movements are the most catered to in dropdown menus. 
+            However, this creates negative effects for keyboard users, screen reader users, and mouse users who are not as precise.
+            For this reason, it is important to limit these "mismatches" and create designs that support users equally. 
+            The improvements made to Google Calendar's dropdown menu are a step in the right direction, but not the end.
+        </h3>
+
+    </div>
+</body>
+</html>
